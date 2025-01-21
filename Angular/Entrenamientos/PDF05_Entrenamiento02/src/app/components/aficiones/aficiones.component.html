@@ -1,0 +1,19 @@
+<section>
+    <div>
+        <label for="nombre">Nombre  </label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="persona.nombre" class="inputs"/>
+        <br>
+        <label for="aficiones">Aficion  </label>
+        <input type="text" id="aficiones" name="aficiones" [(ngModel)]="persona.aficion" class="inputs"/>
+        <br>
+        <button type="submit" (click)="guardarPersona()" class="inputs">Guardar</button>
+    </div>
+    <hr>
+    <div>
+        <ul class="lista">
+            @for (persona of arrayAficiones; track persona.nombre) {
+                <li>{{persona.nombre}} -- {{persona.aficion}}</li>
+            }
+        </ul>
+    </div>
+</section>

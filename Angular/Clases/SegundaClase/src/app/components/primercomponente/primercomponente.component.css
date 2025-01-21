@@ -1,0 +1,94 @@
+.contenedor {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+input {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+p {
+  margin: 5px 0;
+  text-align: left;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+a {
+
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.botonrojo {
+  background-color: red;
+  color: white;
+}
+
+.botonverde {
+  background-color: green;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 5px; /* Espaciado entre botones */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+/* textos colores */
+
+.rojo {
+  color: red; /* Texto en color rojo */
+}
+
+.azul {
+  color: blue; /* Texto en color azul */
+}
+
+.verde {
+  color: green; /* Texto en color verde */
+}
+
+.amarillo {
+  color: yellow; /* Texto en color amarillo */
+}
+
+.morado {
+  color: purple; /* Texto en color morado */
+}

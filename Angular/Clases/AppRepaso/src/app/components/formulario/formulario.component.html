@@ -1,0 +1,52 @@
+
+<section class="container">
+
+    <form class="shadow rounded-3 p-5">
+
+        <div class="mb-3">
+        <label for="nombre" class="form-label mt-3">Nombre</label>
+        <input [(ngModel)]="nuevoUsuario.nombre" type="text" class=" shadow form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre">
+        </div>
+
+        <div class="mb-3">
+        <label for="apellidos" class="form-label mt-3">Apellidos</label>
+        <input [(ngModel)]="nuevoUsuario.apellidos" type="text" class=" shadow form-control"  id="apellidos" placeholder="Introduce tus apellidos" name="apellidos">
+        </div>
+
+        <div class="mb-3">
+            <label for="edad" class="form-label mt-3">Edad</label>
+            <input [(ngModel)]="nuevoUsuario.edad" type="text" class=" shadow form-control"  id="edad" placeholder="Introduce tu edad" name="edad">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-labe mt-3 ">Email</label>
+            <input [(ngModel)]="nuevoUsuario.email" type="email" class="form-control shadow mt-1" 
+            id="email" placeholder="Introduce tu email"   aria-describedby="emailHelp" name="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="telefono" class="form-label mt-3">Nº de telefono</label>
+            <input [(ngModel)]="nuevoUsuario.telefono" type="text" class=" shadow form-control"  id="telefono" placeholder="+34 601 00 00 00" name="telefono">
+        </div>
+        
+        <div class="text-center mb-3">
+            <button (click)="guardardatos()" type="button" class="btn btn-secondary mt-4 ">Enviar</button>
+        </div>
+
+  </form>
+</section>
+
+<br><br><br>
+<section class="container">
+    <div class="card mb-3" *ngFor="let usuario of arrayUsuarios">
+      <div class="card-header">
+        <strong>Usuario: {{usuario.nombre}}</strong>
+      </div>
+      <div class="card-body">
+        <p><strong>Apellidos:</strong> {{usuario.apellidos}}</p>
+        <p><strong>Edad:</strong> {{usuario.edad}}</p>
+        <p><strong>Email:</strong> {{usuario.email}}</p>
+        <p><strong>Teléfono:</strong> {{usuario.telefono}}</p>
+      </div>
+    </div>
+  </section>

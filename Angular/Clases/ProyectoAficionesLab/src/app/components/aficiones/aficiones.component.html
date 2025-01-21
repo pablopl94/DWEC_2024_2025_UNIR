@@ -1,0 +1,42 @@
+<section>
+    <div class="form-container">
+      <div class="form-group">
+        <label for="aficion">Afición  </label>
+        <input [(ngModel)]="newAficion.aficion" type="text" id="aficion" placeholder="Introduce una afición" />
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre </label>
+        <input [(ngModel)]="newAficion.nombre" type="text" id="nombre" placeholder="Introduce tu nombre" />
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nivel </label>
+        <input [(ngModel)]="newAficion.nivel" type="text" id="nivel" placeholder="Introduce tu nombre" />
+      </div>
+
+      <div class="form-group">
+        <button (click)="guardarDatos()">GUARDAR</button>
+      </div>
+    </div>
+  
+    <hr/>
+  
+    <!-- Mostrando  objeto del array aficiones CON *ngFOR  (FORMA VALIDA)-->
+    <!-- <div>
+      <h3>Lista de Aficiones</h3>
+      <ul>
+        <li *ngFor="let aficion of arrayAficiones">
+          {{ aficion.aficion }}- {{ aficion.nombre }}
+        </li>
+      </ul>
+    </div>
+</section> -->
+
+
+  <!--Mostrar objeto del array de forma no valida con innerHtml  -->
+    <div id="listadoContainer" class="list-container" [innerHTML]="cargarDatos()">
+   </div>
+
+  </section>
+

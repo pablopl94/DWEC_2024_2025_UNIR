@@ -1,0 +1,23 @@
+<section class="container mt-5">
+    <h1 class="text-center mb-4">LISTA DE ESTUDIANTES</h1>
+    
+    <ul class="list-unstyled ">
+      @for(estudiante of arrayEstudiantes; track estudiante.id; let par = $even; let impar = $odd; let indice = $index) {
+        <li class="estudiantes mb-3 p-3 border rounded" [class.par]="par" [class.impar]="impar">
+          <span><strong>Indice: </strong></span>
+          <span class="me-3">{{indice}}</span>
+          <span><strong>ID: </strong></span>
+          <span class="me-3">{{estudiante.id}}</span>
+          <span><strong>Nombre: </strong></span>
+          <span class="me-3">{{estudiante.name}}</span>
+          <span class="text-end"><strong>Edad: </strong></span> 
+          <span class="text-end" >{{estudiante.age}}</span>
+        </li>
+      } @empty {
+        <div class="text-center text-danger">
+          <span>No hay estudiantes en la lista</span>
+        </div>
+      }
+    </ul>
+  </section>
+  

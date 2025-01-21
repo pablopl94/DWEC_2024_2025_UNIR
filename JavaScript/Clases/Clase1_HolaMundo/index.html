@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1º FORMA DE AÑADIR JS INTERNO-->
+    <script>
+      function mostrarMensajeInterno() {
+        alert("¡ Este es un mensaje en linea !");
+      }
+    </script>
+
+    <!-- AÑADIR JS EXTERNO EN EL HEAD CON DEFER-->
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Ejemplo enviar mensaje navegador con JS</h1>
+
+    <!--2º FORMA DE AÑADIR JS INTERNO -->
+    <button onclick="mostrarMensaje()">
+      Click, aquí!
+      <script>
+        function mostrarMensaje() {
+          alert("¡ Este es un mensaje en linea !");
+        }
+      </script>
+    </button>
+
+    <br /><br />
+
+    <button onclick="mostrarMensajeInterno()">Pulsa, aquí!</button>
+
+    <br /><br />
+
+    <button onclick="mostrarMensajeExterno()">Notoques !</button>
+
+    <br /><br />
+
+    <button onclick="mostrarNumeroPar()">PARES</button>
+
+    <br /><br />
+
+    <!--COMPARACION TIPOS CON == -->
+    <button onclick="mostrarNumerosIguales()">IGUALES?¿</button>
+
+    <br /><br />
+
+    <!-- COMPARACION TIPOS CON ===-->
+    <button onclick="mostrarNumerosIguales2()">Y CON === SON IGUALES?¿</button>
+
+  </body>
+</html>

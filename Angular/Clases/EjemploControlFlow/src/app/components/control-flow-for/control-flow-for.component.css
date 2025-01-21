@@ -1,0 +1,25 @@
+/* Estilo de la lista */
+ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Quita el padding predeterminado */
+    margin: 0; /* Quita el margen predeterminado */
+    width: 500px;
+    height: 500px;
+    margin-left: 400px;
+  }
+  
+  /* Estilos generales de cada estudiante */
+  .estudiantes {
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid gainsboro; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio entre elementos */
+  }
+
+.par{
+    background-color: aliceblue;
+}
+
+.impar{
+    background-color: lightgrey;
+}

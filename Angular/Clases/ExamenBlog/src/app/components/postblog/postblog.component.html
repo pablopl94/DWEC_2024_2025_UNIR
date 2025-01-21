@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row">
+      <!-- Columna del formulario -->
+      <div class="col-md-4">
+        <form class="shadow rounded-3 p-4">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Título</label>
+            <input [(ngModel)]="post.titulo" type="text" class="form-control" id="nombre" placeholder="Introduce el título" name="nombre">
+          </div>
+    
+          <div class="mb-3">
+            <label for="texto" class="form-label">Texto</label>
+            <textarea [(ngModel)]="post.textoNoticia" class="form-control" id="texto" rows="5" placeholder="Escribe tu noticia aquí" name="texto"></textarea>
+          </div>
+    
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input [(ngModel)]="post.fecha" type="date" class="form-control" id="fecha" name="fecha">
+          </div>
+    
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input [(ngModel)]="post.imagen" type="text" class="form-control" id="imagen" placeholder="Introduce la URL de una imagen" name="imagen">
+          </div>
+    
+          <div class="text-center">
+            <button (click)="guardarDatos()" type="button" class="btn btn-secondary mt-3">Enviar</button>
+          </div>
+        </form>
+      </div>
+    
+      <!-- Columna de las tarjetas -->
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6 mb-4" *ngFor="let noticia of arrayPost">
+            <div class="card h-100">
+              <img src="{{noticia.imagen}}" class="card-img-top img-fluid" alt="Imagen de la noticia">
+              <div class="card-body">
+                <h5 class="card-title">{{noticia.titulo}}</h5>
+                <p class="card-text">{{noticia.textoNoticia}}</p>
+                <p class="card-text"><small class="text-muted">{{noticia.fecha}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

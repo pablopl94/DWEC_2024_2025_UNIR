@@ -1,0 +1,10 @@
+.container{
+    padding: 10px;
+    width: 600px;
+    text-align: center;
+    border: 1px solid lightslategray;
+}
+
+.azul{
+    background-color: lightblue;
+}

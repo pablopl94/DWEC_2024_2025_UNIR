@@ -1,0 +1,91 @@
+/* Contenedor principal */
+.form-container {
+    width: 300px; /* Ajusta el ancho */
+    margin: 20px auto; /* Centra horizontalmente */
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde para que parezca un cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  }
+  
+  /* Estilo para cada grupo (label + input) */
+  .form-group {
+    margin-bottom: 15px; /* Separación entre los campos */
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+  }
+  
+  /* Etiquetas */
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs */
+  .form-group input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Botón */
+  button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  }
+
+  
+/* Contenedor principal para los elementos */
+.list-container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  /* Cada elemento de la lista */
+  .list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+  }
+  
+  .list-item:last-child {
+    border-bottom: none; /* Sin borde para el último elemento */
+  }
+  
+  /* Afición (título en negrita) */
+  .aficion {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Nombre */
+  .nombre {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Nivel */
+  .nivel {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+  }
+  

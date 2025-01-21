@@ -1,0 +1,16 @@
+
+.divForm{
+    
+    padding: 50px;
+    width: 5000px;
+}
+
+.cardAsistence{
+    display: flex;
+    border: 1px solid gainsboro;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+

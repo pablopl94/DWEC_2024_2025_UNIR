@@ -1,0 +1,45 @@
+header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #6c757d;
+}
+
+.card-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.card-footer {
+  font-size: 0.85rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+}
+.card-header.bg-dark {
+  background-color: #434445f0; /* Gris oscuro, similar al del encabezado */
+  color: white; /* Texto blanco para buen contraste */
+}
+

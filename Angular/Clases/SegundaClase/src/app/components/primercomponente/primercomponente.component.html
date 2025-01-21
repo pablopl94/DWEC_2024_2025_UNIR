@@ -1,0 +1,66 @@
+<article>
+  <div class="contenedor">
+    <h2 [class]="colorTexto">Datos de contacto</h2>
+    <h3>{{ nombreCompleto() }}</h3>
+    <!--Introducción a la Inteporlacion, one data binding -->
+    <p><strong>Nombre: </strong>{{ nombre }}</p>
+    <p><strong>Apellidos: </strong>{{ apellidos }}</p>
+    <p><strong>Edad: </strong>{{ edad }}</p>
+    <p><strong>Email: </strong>{{ email }}</p>
+    <p><strong>Libros preferidos: </strong>{{ libroPreferido }}</p>
+    <div [innerHTML]="infoBiblioteca()"></div>
+  </div>
+
+  <div>
+    <a [href]="ruta" [class.rojo]="!InfoColor" [class.verde]="InfoColor"
+      >MAS INFORMACION</a
+    >
+    <button (click)="myOnclick()">CLICK AQUI</button>
+    <button
+      [innerText]="cambiarTextoStock()"
+      [class.botonrojo]="!cambiarColorStock()"
+      [class.botonverde]="cambiarColorStock()"
+    >
+      <!--
+      Otra forma de añadir el texto es con interpolación:
+      {{cambiarTextoStock()}}
+      -->
+    </button>
+  </div>
+
+  <div>
+    <input
+      type="text"
+      (input)="escribirTexto($event)"
+      placeholder="Introduce una frase"
+    />
+    <h2>
+      <strong>{{ texto }}</strong>
+    </h2>
+  </div>
+
+  <div>
+    <button [innerText]="contador" (click)="myOnclick2()"></button>
+  </div>
+
+  <div>
+    <h2 [hidden]="esOculto">ESTO ES UN MENSAJE OCULTO</h2>
+  </div>
+
+  <div>
+    <b>STOCK: </b><input type="number" [(ngModel)]="stock">
+  </div>
+
+</article>
+
+<!-- Data binding
+1) Interpolación -> {{}}
+2) Property binding -> [propiedadDOM]="prop/meto ts" // Class binding 
+3) Event binding -> (click)="miMetodo() ó  (click)="miMetodo($event)"
+
+Two way Data binding
+1) Importar el Formsmodule en el ts
+2) <input type="tipo" [(ngModel)]="propiedaClase ó miMetodo" placeholder="Introduce.." >
+
+
+-->

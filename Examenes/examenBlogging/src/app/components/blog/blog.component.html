@@ -1,0 +1,84 @@
+<div class="container mt-4">
+  <div class="row">
+    
+    <!-- FORMULARIO NOTICIA -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm p-4 mb-4">
+        <div class="card-header bg-dark text-white">
+          <h2 class="mb-0">Nueva Noticia</h2>
+        </div>
+        <div class="card-body">
+          <form (submit)="agregarNoticia(); $event.preventDefault()">
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Título</label>
+              <input
+                type="text"
+                id="titulo"
+                class="form-control"
+                [(ngModel)]="nuevaNoticia.titulo"
+                name="titulo"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="imagen" class="form-label">URL de la Imagen</label>
+              <input
+                type="text"
+                id="imagen"
+                class="form-control"
+                [(ngModel)]="nuevaNoticia.imagen"
+                name="imagen"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="texto" class="form-label">Texto</label>
+              <textarea
+                id="texto"
+                class="form-control"
+                [(ngModel)]="nuevaNoticia.texto"
+                name="texto"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input
+                type="date"
+                id="fecha"
+                class="form-control"
+                [(ngModel)]="nuevaNoticia.fecha"
+                name="fecha"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">PUBLICAR</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTICIAS -->
+    <div class="col-lg-8">
+      <div class="row">
+        <div *ngFor="let noticia of noticias" class="col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              [src]="noticia.imagen"
+              class="card-img-top img-fluid"
+              alt="Imagen de la noticia"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ noticia.titulo }}</h5>
+              <p class="card-text">{{ noticia.texto }}</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Publicado el: {{ noticia.fecha }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

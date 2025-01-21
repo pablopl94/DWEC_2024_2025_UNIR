@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="azul">Información</h1>
+    <p><strong>Nombre:</strong><span>{{nombreCompleto()}}</span> </p>
+    <p><strong>Nombre:</strong><span>{{this.edad}}</span> </p>
+</div>
+
+<hr>
+
+<input type="text" (input)="cargarTexto($event)">
+<p>{{this.texto}}</p>

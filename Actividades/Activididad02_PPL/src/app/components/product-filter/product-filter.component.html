@@ -1,0 +1,39 @@
+<form #filterForm="ngForm" (ngSubmit)="enviarFiltros(filterForm)" class="p-2 bg-white border rounded shadow-sm">
+  <div class="row align-items-center g-2 row-cols-auto">
+
+    <div class="col-auto">
+      <input id="name" type="text" name="name" class="form-control" ngModel placeholder="Introduce un nombre" />
+    </div>
+
+    <div class="col-auto">
+      <select id="category" name="category" class="form-select" ngModel>
+        <option value="" selected disabled>Seleccione una categoría</option>
+        @for (categoria of categorias; track $index) {
+          <option value="{{ categoria }}">{{ categoria }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="col-auto">
+      <input id="priceMin" type="number" name="priceMin" class="form-control" ngModel placeholder="Precio mínimo" />
+    </div>
+
+    <div class="col-auto">
+      <input id="priceMax" type="number" name="priceMax" class="form-control" ngModel placeholder="Precio máximo" />
+    </div>
+
+    <div class="col-auto d-flex align-items-center">
+      <div class="form-check form-switch">
+        <input type="checkbox" id="active" name="active" class="form-check-input" [value]="true" ngModel />
+        <label class="form-check-label" for="active">Activo</label>
+      </div>
+    </div>
+
+    <div class="col-auto ms-auto">
+      <button type="submit" class="btn btn-primary px-4 py-2">
+        <i class="bi bi-filter"></i> Filtrar
+      </button>
+    </div>
+
+  </div>
+</form>

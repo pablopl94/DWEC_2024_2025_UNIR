@@ -1,0 +1,67 @@
+<section class="container mt-5">
+  <form [formGroup]="altaForm" (ngSubmit)="getDataForm()" class="card p-4 shadow-lg">
+    <h4 class="text-center mb-4 text-primary">Añadir Producto</h4>
+
+    <div class="mb-3">
+      <label for="name" class="form-label fw-bold">Nombre producto</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Introduce un nombre"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label fw-bold">Descripción</label>
+      <textarea
+        class="form-control"
+        placeholder="Introduce la descripción del producto.."
+        id="description"
+        formControlName="description"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="price" class="form-label fw-bold">Precio (€)</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Introduce el precio del producto"
+          id="price"
+          formControlName="price"
+        />
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="category" class="form-label fw-bold">Categoría</label>
+        <select class="form-select" id="category" formControlName="category">
+          <option value="" selected>Elige una categoría</option>
+          @for (categoria of categorias; track $index) {
+            <option value="categoria">{{ categoria }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label fw-bold">Imagen del producto</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Introduce la URL de la imagen"
+        id="image"
+        formControlName="image"
+      />
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+      <button type="submit" class="btn btn-primary w-50" [disabled]="!altaForm.valid">
+        <i class="bi bi-upload"></i> Enviar
+      </button>
+    </div>
+  </form>
+</section>

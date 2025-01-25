@@ -22,7 +22,7 @@ export class ProductFilterComponent {
   cargarCategorias(): void {
     this.productoService.getCategories().then((categorias) => {
       this.categorias = categorias;
-      console.log('Categorías cargadas:', this.categorias);
+      console.log('Categorías cargadas en el filterComponente:', this.categorias);
     });
   }
 
@@ -36,7 +36,17 @@ export class ProductFilterComponent {
       priceMax: filtros.priceMax ? Number(filtros.priceMax) : undefined,
     };
 
-    console.log('Filtros enviados:', filtrosTransformados);
+    console.log('Filtros enviados desde el filterComponente:', filtrosTransformados);
     this.filtrosAplicados.emit(filtrosTransformados);
   }
+
+  
+  resetarFormulario(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    if (selectElement.value === 'todos') {
+      window.location.reload();
+    }
+  }
+
+
 }

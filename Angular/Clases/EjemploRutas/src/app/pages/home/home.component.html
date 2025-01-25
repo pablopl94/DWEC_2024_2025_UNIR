@@ -1,1 +1,17 @@
-<p>home works!</p>
+<section>
+    <div class="hero">
+        <div class="text-center">
+            <h1>Bienvenido a nuestra empresa en Desarrolo Web</h1>
+            <p>Ofrecemos nuestros servicios Full - Stack </p>
+            <a [routerLink]="['/servicios']" class="btn btn-secondary me-3">Nuestros servicios</a>
+            <button class="btn btn-warning" routerLink="['/contacto']">Contacto</button>
+            <form  #subscribe="ngForm" (ngSubmit)="getSubscribe(subscribe)">
+                <div class="d-flex gap-2 mt-3">
+                    <input type="text" id="email" class="form-control"
+                    name="email" ngModel placeholder="Introduce tu email">
+                    <input type="submit" class="btn btn-danger" value="Subscribirse">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

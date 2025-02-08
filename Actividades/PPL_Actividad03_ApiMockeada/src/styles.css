@@ -1,0 +1,11 @@
+
+.background-container {
+    background-color: rgba(243, 248, 248, 0.017); 
+    backdrop-filter: blur(10px); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+

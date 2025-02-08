@@ -1,0 +1,20 @@
+.card{
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.151); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(0, 0, 0, 0.057); 
+}
+
+.imageUser{
+    height: 150px;
+    width: 150px;
+}
+
+p{
+    font-size: 13px;
+    color: #1e202095;
+}
+
+.card-title{
+    color: #3BBFFF;
+}

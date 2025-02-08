@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center gap-4">
+    @if(parent == 'card'){
+        <a [routerLink]="['/user', miId]" class="text-secondary text-decoration-none d-flex flex-column align-items-center" title="Ver usuario">
+            <i class="bi bi-eye fs-2"></i>
+            <span class="small">Ver detalles</span>
+        </a>
+    } @else if (parent == 'view'){
+        <a [routerLink]="['/home']" class="text-secondary text-decoration-none d-flex flex-column align-items-center" title="Volver a inicio">
+            <i class="bi bi-arrow-left fs-2"></i>
+            <span class="small">Volver</span>
+        </a>
+    }
+    <a [routerLink]="['/actualizar','serie', miId]" class="text-warning text-decoration-none d-flex flex-column align-items-center" title="Editar usuario">
+        <i class="bi bi-pencil-square fs-2"></i>
+        <span class="small">Editar</span>
+    </a>
+    <button (click)="deleteUsuario(miId)" class="border-0 bg-transparent text-danger d-flex flex-column align-items-center p-0" title="Eliminar usuario">
+        <i class="bi bi-trash fs-2"></i>
+        <span class="small">Eliminar</span>
+    </button>
+</div>

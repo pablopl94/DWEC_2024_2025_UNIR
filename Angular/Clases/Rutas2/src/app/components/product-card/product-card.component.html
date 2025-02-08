@@ -1,0 +1,8 @@
+<div class="card shadow border text-center p-3">
+  <h3 class="mb-2">{{ miProducto.title }}</h3>
+  <p class="text-muted">{{ miProducto.subtitle }}</p>
+
+  <a [routerLink]="['/producto', miProducto.url]" class="btn btn-danger btn-sm w-100 d-flex align-items-center justify-content-center">
+    <i class="bi bi-eye me-2"></i> Ver detalles
+  </a>
+</div>

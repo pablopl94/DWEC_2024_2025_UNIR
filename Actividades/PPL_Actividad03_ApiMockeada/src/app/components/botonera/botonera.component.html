@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center align-items-center gap-4">
+    @if(parent == 'card'){
+    <a [routerLink]="['/user', miId]"
+        class="text text-decoration-none d-flex flex-column align-items-center hover-effect ver-detalles"
+        title="Ver usuario">
+        <i class="bi bi-eye fs-4"></i>
+        <span class="small">Ver detalles</span>
+    </a>
+    } @else if (parent == 'view'){
+    <a [routerLink]="['/home']"
+        class="text text-decoration-none d-flex flex-column align-items-center hover-effect volver"
+        title="Volver a inicio">
+        <i class="bi bi-arrow-left fs-4"></i>
+        <span class="small">Volver</span>
+    </a>
+    }
+    <a [routerLink]="['/updater',miId]"
+        class="text text-decoration-none d-flex flex-column align-items-center hover-effect editar"
+        title="Editar usuario">
+        <i class="bi bi-pencil-square fs-4"></i>
+        <span class="small">Editar</span>
+    </a>
+    <button (click)="deleteUsuario(miId)"
+        class="border-0 bg-transparent text d-flex flex-column align-items-center p-0 hover-effect eliminar"
+        title="Eliminar usuario">
+        <i class="bi bi-trash fs-4"></i>
+        <span class="small">Eliminar</span>
+    </button>
+</div>

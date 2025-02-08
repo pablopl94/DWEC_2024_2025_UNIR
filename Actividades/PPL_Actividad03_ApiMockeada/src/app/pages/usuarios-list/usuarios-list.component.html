@@ -1,0 +1,19 @@
+<div class="row g-4 mt-2">
+    @for (usuario of usuariosPaginados; track usuario._id) {
+    <article class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <app-card-usuario [miUsuario]="usuario"></app-card-usuario>
+    </article>
+    }
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <button (click)="anteriorPagina()" [disabled]="paginaActual === 1" class="btn bg-white mx-2">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <span class="align-self-center">Página {{ paginaActual }} de {{ totalPaginas }}</span>
+
+    <button (click)="siguientePagina()" [disabled]="paginaActual >= totalPaginas" class="btn bg-white mx-2">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+</div>

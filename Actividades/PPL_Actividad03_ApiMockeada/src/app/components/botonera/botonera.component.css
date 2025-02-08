@@ -1,0 +1,28 @@
+.text{
+    color: #1e2f2f;
+}
+
+
+.hover-effect {
+    transition: color 0.3s ease-in-out;
+}
+
+
+.ver-detalles:hover {
+    color: #5BE0E6 !important; /* Azul claro */
+}
+
+
+.volver:hover {
+    color: #FF8C00 !important; /* Naranja */
+}
+
+
+.editar:hover {
+    color: #28A745 !important; /* Verde */
+}
+
+
+.eliminar:hover {
+    color: #DC3545 !important; /* Rojo */
+}

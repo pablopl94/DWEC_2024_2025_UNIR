@@ -1,0 +1,10 @@
+<div class="d-flex gap-2">
+    @if (parent == 'card') {
+        <a [routerLink]="['/serie',myId]" class="btn btn-primary">Ver detalles</a>
+    }@else {
+        <a [routerLink]="['/series']" class="btn btn-secondary"> Volver al inicio</a>
+    }
+    <a [routerLink]="['/actualizar','serie',myId]" class="btn btn-warning">Actualizar</a>
+    <button class="btn btn-danger" (click)="deleteSerie(myId)">Borrar</button>
+
+</div>

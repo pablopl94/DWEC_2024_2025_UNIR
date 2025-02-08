@@ -1,0 +1,41 @@
+<section class="container mt-4">
+  <div class="card shadow p-4 usuario-card">
+    <div class="row g-4 align-items-center h-100">
+      <div
+        class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+      >
+        <div class="usuario-imagen">
+          <img
+            class="img-fluid"
+            [src]="miUsuario.image"
+            [alt]="miUsuario.username"
+          />
+        </div>
+      </div>
+      <div class="col-md-1 d-none d-md-block"></div>
+      <div
+        class="col-12 col-md-7 d-flex flex-column justify-content-between h-100 overflow-hidden"
+      >
+        <div class="flex-grow-1 text-wrap text-break">
+          <h1 class="title fw-bold text-truncate">
+            {{ miUsuario.first_name }}
+          </h1>
+          <h2 class="text-secondary text-truncate">
+            {{ miUsuario.last_name }}
+          </h2>
+          <hr />
+          <p class="fw-bold text-truncate">
+            Nombre de usuario:
+            <span class="fw-normal">{{ miUsuario.username }}</span>
+          </p>
+          <p class="fw-bold text-truncate">
+            Email: <span class="fw-normal">{{ miUsuario.email }}</span>
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <app-botonera [parent]="'view'" [miId]="miUsuario._id"></app-botonera>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -20,6 +20,7 @@ export class BotoneraComponent {
     this.parent = "";
   }
 
+  //Metodo para eliminar usuario, con confirmación, recarga la pagina si todo es correcto 
   async deleteUsuario(_id: string) {
     const result = await Swal.fire({
       title:`¿Seguro que quieres eliminar al usuario?`,

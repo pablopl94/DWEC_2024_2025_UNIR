@@ -14,7 +14,7 @@ export class UsuarioService {
 
   constructor() {}
 
-  // Cargar usuarios desde la API 
+  // Cargar usuarios desde la API , pasando el array que hay dentro de results. 
   getAll(): Promise<IUsuario[]> {
     return lastValueFrom(
       this.httpClient.get<{results: IUsuario[]}>(this.baseUrl)

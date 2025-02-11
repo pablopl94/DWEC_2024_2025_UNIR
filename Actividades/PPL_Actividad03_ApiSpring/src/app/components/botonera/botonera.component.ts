@@ -17,7 +17,7 @@ export class BotoneraComponent {
   @Input() parent: string = "";
 
   async deleteUsuario(id: number) {
-    const confirmacion = confirm(`¿Estás seguro de que quieres eliminar el usuario ${this.miId}?`);
+    const confirmacion = confirm(`¿Estas seguro de que quieres eliminar el usuario ${this.miId}?`);
     if (confirmacion) {
       await this.usuariosService.deleteById(id);
       alert(`Usuario eliminado correctamente.`);

@@ -23,6 +23,10 @@ export class UsuariosListComponent implements OnInit {
     this.totalPaginas = 1; 
   }
 
+  // Obtenemos el array de usuarios con el metodo del service y los guardamos
+  // en el array que hemos creado en el componente 
+  // y llamamos al metodo para calcular las paginas
+
   async ngOnInit() {
     try {
       this.listaUsuarios = await this.usuarioService.getAll();

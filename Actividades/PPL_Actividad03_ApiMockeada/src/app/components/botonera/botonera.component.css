@@ -9,20 +9,20 @@
 
 
 .ver-detalles:hover {
-    color: #5BE0E6 !important; /* Azul claro */
+    color: #5BE0E6 !important;
 }
 
 
 .volver:hover {
-    color: #FF8C00 !important; /* Naranja */
+    color: #FF8C00 !important; 
 }
 
 
 .editar:hover {
-    color: #28A745 !important; /* Verde */
+    color: #28A745 !important;
 }
 
 
 .eliminar:hover {
-    color: #DC3545 !important; /* Rojo */
+    color: #DC3545 !important; 
 }

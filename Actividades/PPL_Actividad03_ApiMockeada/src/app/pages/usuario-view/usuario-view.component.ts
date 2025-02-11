@@ -16,10 +16,11 @@ export class UsuarioViewComponent implements OnInit {
   usuarioService = inject(UsuarioService);
   miUsuario!: IUsuario;
 
+  //Metodo que obtiene el _id de la URL, se lo pasa al metodo del servicio para buscar por id
+  // un usuario y lo guardamos en la variable miUsuario
   ngOnInit(): void {
    this.activatedRoute.params.subscribe(async (params:any)=>{
     let id = params._id;
-    console.log(id);
     try{
       this.miUsuario = await this.usuarioService.getById(id)
     }catch(error){

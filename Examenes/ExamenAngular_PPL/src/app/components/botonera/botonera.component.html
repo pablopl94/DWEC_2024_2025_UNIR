@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center align-items-center gap-4">
+    @if(parent == 'card'){
+    <button [routerLink]="['/producto', miId]"
+        class="btn btn-outline-primary d-flex flex-column align-items-center hover-effect ver-detalles w-100"
+        title="Ver detalles">
+        <i class="bi bi-eye fs-4"></i>
+        <span class="small">Ver detalles</span>
+    </button>
+    } @else if (parent == 'view'){
+    <button [routerLink]="['/home']"
+        class="btn btn-outline-secondary d-flex flex-column align-items-center hover-effect volver w-100"
+        title="Volver a inicio">
+        <i class="bi bi-arrow-left fs-4"></i>
+        <span class="small">Volver</span>
+    </button>
+    }
+</div>

@@ -1,5 +1,5 @@
 {
-  "name": "actividad02-ppl",
+  "name": "examen-angular-ppl",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,8 +20,7 @@
     "@angular/router": "^19.0.0",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
-    "tslib": "^2.8.1",
-    "uuid": "^11.0.5",
+    "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

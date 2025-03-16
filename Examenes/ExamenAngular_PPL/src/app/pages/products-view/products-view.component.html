@@ -1,0 +1,28 @@
+<section class="container mt-5">
+  <div class="card shadow-lg p-4 usuario-card rounded-4">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+        <div class="usuario-imagen border shadow-sm">
+          <img class="usuario-img img-fluid" [src]="miProduct.image" [alt]="miProduct.name" />
+        </div>
+      </div>
+
+      <div class="col-md-1 d-none d-md-block"></div>
+
+      <div class="col-12 col-md-7 d-flex flex-column justify-content-between overflow-hidden">
+        <div class="flex-grow-1 text-wrap text-break text-start">
+          <h2 class="text-secondary text-uppercase py-2">{{ miProduct.category }}</h2>
+          <hr />
+          <h1 class="title fw-bold mb-3">{{ miProduct.name }}</h1>
+          <p class="card-price text-danger fw-bold fs-4 mb-3">{{ miProduct.price }}€</p>
+          <p class="fw-bold">
+            <span class="fw-normal">{{ miProduct.description }}</span>
+          </p>
+        </div>
+        <div class="d-flex justify-content-start mt-3">
+          <app-botonera [parent]="'view'" [miId]="miProduct._id"></app-botonera>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

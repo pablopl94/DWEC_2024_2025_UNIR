@@ -1,10 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import {FormControl,FormGroup,ReactiveFormsModule,Validators,} from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { IProduct } from '../../interfaces/iproduct';
 import { v4 as uuidv4 } from 'uuid';
@@ -63,4 +58,3 @@ export class ProductFormComponent {
 
 
 }
-
